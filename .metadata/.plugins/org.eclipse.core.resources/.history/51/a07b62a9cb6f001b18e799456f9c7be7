@@ -1,0 +1,5 @@
+package bron.spies.entities;
+
+public class User {
+
+}

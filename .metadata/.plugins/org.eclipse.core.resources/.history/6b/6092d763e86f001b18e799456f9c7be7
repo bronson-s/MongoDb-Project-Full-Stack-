@@ -1,0 +1,5 @@
+package com.bronson.entities;
+
+public class User {
+
+}
