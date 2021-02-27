@@ -1,5 +1,0 @@
-
-server.port=8089
-spring.jmx.default-domain=BookEvent
-
-spring.data.mongodb.uri=mongodb://localhost:27017/
