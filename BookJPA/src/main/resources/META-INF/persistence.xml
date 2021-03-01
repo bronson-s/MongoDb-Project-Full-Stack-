@@ -11,9 +11,9 @@
     </provider>
  	<!-- <jta-data-source>java:/DefaultDS</jta-data-source> -->
     
-<!--     
+   
     <class>com.bronson.entities.User</class>
-    <class>com.bronson.entities.Book</class> -->
+    <class>com.bronson.entities.Book</class>
 
 
  
@@ -21,6 +21,8 @@
     	    <property name="hibernate.transaction.jta.platform" value="JBossTS" />
    
  			<property name="hibernate.ogm.datastore.provider" value="MONGODB" />
+ 			 <property name="hibernate.ogm.datastore.provider"
+                      value="infinispan_embedded" />
             <property name="hibernate.ogm.mongodb.host" value="127.0.0.1"/>
             <property name="hibernate.ogm.mongodb.port" value="27017"/>
             <property name="hibernate.ogm.mongodb.database" value="bookeventdb"/>
@@ -36,6 +38,7 @@
 
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
       <property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider" />
+       -->
 
       <property name="hibernate.c3p0.max_size" value="5" />
       <property name="hibernate.c3p0.min_size" value="0" />
@@ -43,7 +46,6 @@
       <property name="hibernate.c3p0.idle_test_period" value="300"/>
       <property name="hibernate.c3p0.max_statements" value="0" />
       <property name="hibernate.c3p0.timeout" value="60" />
-       -->
     </properties>
   </persistence-unit>
 </persistence>

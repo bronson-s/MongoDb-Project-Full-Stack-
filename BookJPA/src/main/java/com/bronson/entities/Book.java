@@ -3,8 +3,10 @@ package com.bronson.entities;
 
 import javax.persistence.Id;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 
 
+@Document(collection = "user")
 public class Book {
 
 	//Fields
@@ -12,10 +14,10 @@ public class Book {
 	private long id;
 	private String title;
 	private String author;
-	private int pagecount;
+	private Integer pagecount;
 	
 	//Constructors
-	public Book(long id, String title, String author, int pagecount) {
+	public Book(long id, String title, String author, Integer pagecount) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -45,10 +47,10 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public int getPagecount() {
+	public Integer getPagecount() {
 		return pagecount;
 	}
-	public void setPagecount(int pagecount) {
+	public void setPagecount(Integer pagecount) {
 		this.pagecount = pagecount;
 	}
 	
@@ -60,27 +62,9 @@ public class Book {
 
 	
 	//Hashcode and Equals
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		return result;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Book other = (Book) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
+
+
 
 	
 	

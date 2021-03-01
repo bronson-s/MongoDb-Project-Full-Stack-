@@ -37,7 +37,7 @@ ext {
 // define project specific dependencies
 dependencies {
 //  compile "mysql:mysql-connector-java:$mySqlConnectorVersion"
-//implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
   compile 'org.mongodb:mongodb-driver-sync:4.2.0'
   compile "log4j:log4j:1.2.17"
   compile "org.hibernate:hibernate-core:$hibernateVersion"
