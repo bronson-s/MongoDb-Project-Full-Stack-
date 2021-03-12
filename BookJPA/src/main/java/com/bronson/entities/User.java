@@ -1,5 +1,7 @@
 package com.bronson.entities;
 
+import java.util.List;
+
 import javax.persistence.Id;
 
 import org.bson.types.ObjectId;
@@ -14,16 +16,16 @@ public class User {
 	private String firstname;
 	private String lastname;
 	private String password;
-	private Book book;
+	private List<Book> books;
 
 	// Constuctors
-	public User(String username, String firstname, String lastname, String password, Book book) {
+	public User(String username, String firstname, String lastname, String password, List<Book> books) {
 		super();
 		this.username = username;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.password = password;
-		this.book = book;
+		this.books = books;
 	}
 
 	public User() {
@@ -71,19 +73,19 @@ public class User {
 		this.password = password;
 	}
 
-	public Book getBook() {
-		return book;
+	public List<Book> getBooks() {
+		return books;
 	}
 
-	public void setBook(Book book) {
-		this.book = book;
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
   
 	// ToString
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", firstname=" + firstname + ", lastname=" + lastname
-				+ ", password=" + password + ", book=" + book + "]";
+				+ ", password=" + password + ", book=" + books + "]";
 	}
 
 	@Override

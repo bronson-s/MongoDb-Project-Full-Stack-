@@ -1,16 +1,20 @@
 package com.bronson.entities;
 
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Document(collection = "user")
+//
+//@Document(collection = "user")
 public class Book {
 
 	//Fields
 	@Id
+//	@GeneratedValue( strategy = GenerationType.IDENTITY )
 	private long id;
 	private String title;
 	private String author;

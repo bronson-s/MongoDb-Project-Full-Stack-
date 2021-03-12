@@ -38,6 +38,8 @@ ext {
 dependencies {
 //  compile "mysql:mysql-connector-java:$mySqlConnectorVersion"
 
+    compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+
   compile 'org.mongodb:mongodb-driver-sync:4.2.0'
   compile "log4j:log4j:1.2.17"
   compile "org.hibernate:hibernate-core:$hibernateVersion"

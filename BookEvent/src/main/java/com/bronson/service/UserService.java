@@ -38,6 +38,7 @@ public User update(User user, ObjectId pid) {
 	if(user.getLastname() != null ) {userToUpdate.setFirstname(user.getLastname());}
 	if(user.getUsername() != null ) {userToUpdate.setUsername(user.getUsername());}
 	if(user.getPassword() != null ) {userToUpdate.setPassword(user.getPassword());}
+	if(user.getBooks() != null ) {userToUpdate.setBooks(user.getBooks());}
 	userRepo.save(userToUpdate);
 	return userToUpdate;
 	}
